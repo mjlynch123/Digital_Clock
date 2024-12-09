@@ -12,11 +12,15 @@ function updateClock() {
     minutes = minutes < 10 ? `0${minutes}` : minutes;
     seconds = seconds < 10 ? `0${seconds}` : seconds;
 
+    // Formatting the time
     const currentTime = `${hours}:${minutes}:${seconds}`;
 
+    // Adding clock to the DOM
     clockElement.textContent = currentTime;
 }
 
+// Update the clock every second
 setInterval(updateClock, 1000);
 
+// Initial call
 updateClock();
